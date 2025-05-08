@@ -133,11 +133,11 @@ It's definitely better to ask on Discord. Due to the volume of GitHub notificati
 
 The repository contains a file called `.pre-commit-config.yaml` that defines several 'commit hooks' that can be run automatically just before and after creating a new commit. These hooks lint your commit message, and the changes it contains to ensure they will pass the automated CI for pull requests.
 To enable these hooks firstly follow the installation instructions available at https://pre-commit.com/#install and then enable one or both of the following hooks:
- - pre-commit hook - Runs Meta/lint-ci.sh and Meta/lint-ports.py to ensure changes to the code will pass linting:
+ - pre-commit hook - Runs `Meta/lint-ci.sh` to ensure changes to the code will pass linting:
    ```console
    pre-commit install
    ```
- - post-commit hook - Lints the commit message to ensure it will pass the commit linting:
+ - post-commit hook - Runs `Meta/lint-commit.sh` to lint the commit message to ensure it will pass the commit linting:
    ```console
    pre-commit install --hook-type commit-msg
    ```
